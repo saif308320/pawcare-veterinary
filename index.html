@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PawCare Veterinary Hospital — Compassionate Care for Your Best Friend</title>
+<meta name="description" content="PawCare Veterinary Hospital in Kensington, London. General checkups, vaccinations, surgery, dental care, emergency care & grooming since 2016.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+<style>
+:root{
+  --mint:#5fd6b2; --mint-dark:#2bb291; --mint-deep:#17856c; --mint-soft:#e8f9f3;
+  --coral:#ff7d6b; --coral-soft:#fff0ed;
+  --cream:#fdfaf6; --warm:#fff7ee;
+  --ink:#1f2d2a; --ink-soft:#5c6f6a;
+  --white:#ffffff;
+  --shadow-sm:0 4px 14px rgba(31,45,42,.08);
+  --shadow-md:0 12px 34px rgba(31,45,42,.12);
+  --shadow-lg:0 24px 60px rgba(31,45,42,.18);
+  --radius-sm:14px; --radius:22px; --radius-lg:34px;
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--cream);
+  overflow-x:hidden;line-height:1.65;font-size:16px;
+}
+h1,h2,h3,h4,.display{font-family:'Fredoka',sans-serif;line-height:1.12;font-weight:600;letter-spacing:.2px}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+::selection{background:var(--mint);color:#fff}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;font-family:'Fredoka',sans-serif;
+  font-weight:600;font-size:16px;padding:15px 30px;border-radius:50px;border:none;cursor:pointer;
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,background .3s;position:relative;
+}
+.btn svg{width:18px;height:18px;transition:transform .3s}
+.btn:hover svg{transform:translateX(4px)}
+.btn-primary{background:var(--coral);color:#fff;box-shadow:0 10px 24px rgba(255,125,107,.4)}
+.btn-primary:hover{transform:scale(1.06) translateY(-2px);box-shadow:0 16px 34px rgba(255,125,107,.5)}
+.btn-mint{background:var(--mint);color:#fff;box-shadow:0 10px 24px rgba(95,214,178,.4)}
+.btn-mint:hover{transform:scale(1.06) translateY(-2px);box-shadow:0 16px 34px rgba(95,214,178,.5)}
+.btn-ghost{background:transparent;color:var(--ink);border:2px solid rgba(31,45,42,.18)}
+.btn-ghost:hover{transform:scale(1.06) translateY(-2px);border-color:var(--mint);color:var(--mint-dark);box-shadow:var(--shadow-sm)}
+.btn-white{background:#fff;color:var(--mint-deep)}
+.btn-white:hover{transform:scale(1.06) translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn:active{transform:scale(.97)}
+
+/* ---------- Section headings ---------- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;background:var(--mint-soft);color:var(--mint-deep);
+  font-family:'Fredoka',sans-serif;font-weight:600;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;
+  padding:8px 18px;border-radius:50px;margin-bottom:18px;
+}
+.eyebrow.coral{background:var(--coral-soft);color:var(--coral)}
+.sec{padding:96px 0}
+.sec-head{text-align:center;max-width:720px;margin:0 auto 56px}
+.sec-head h2{font-size:clamp(30px,4.6vw,46px);color:var(--ink)}
+.sec-head p{color:var(--ink-soft);margin-top:16px;font-size:17px}
+
+/* ---------- Reveal animation ---------- */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal[data-d="1"]{transition-delay:.12s}
+.reveal[data-d="2"]{transition-delay:.24s}
+.reveal[data-d="3"]{transition-delay:.36s}
+.reveal[data-d="4"]{transition-delay:.48s}
+.reveal[data-d="5"]{transition-delay:.6s}
+.reveal-left{transform:translateX(-60px)}
+.reveal-right{transform:translateX(60px)}
+.reveal-zoom{transform:scale(.88)}
+
+/* ---------- Header ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;transition:all .4s;
+  padding:18px 0;
+}
+header.scrolled{background:rgba(253,250,246,.92);backdrop-filter:blur(14px);box-shadow:var(--shadow-sm);padding:12px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-family:'Fredoka',sans-serif;font-weight:700;font-size:22px;color:var(--ink)}
+.logo-mark{width:46px;height:46px;background:linear-gradient(135deg,var(--mint),var(--mint-dark));border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 16px rgba(95,214,178,.45);flex:none}
+.logo-mark svg{width:24px;height:24px}
+.logo small{display:block;font-size:11px;font-weight:600;letter-spacing:2px;color:var(--ink-soft);text-transform:uppercase;font-family:'Nunito Sans',sans-serif}
+.nav-links{display:flex;align-items:center;gap:6px;list-style:none}
+.nav-links a{
+  padding:9px 15px;border-radius:50px;font-weight:700;font-size:15px;color:var(--ink);
+  transition:background .25s,color .25s;
+}
+.nav-links a:hover{background:var(--mint-soft);color:var(--mint-dark)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.nav-phone{display:inline-flex;align-items:center;gap:8px;font-weight:800;color:var(--mint-deep);font-size:15px}
+.nav-phone svg{width:17px;height:17px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;border-radius:10px}
+.hamburger span{display:block;width:26px;height:3px;background:var(--ink);border-radius:3px;margin:5px 0;transition:.3s}
+.hamburger.active span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  background:
+    linear-gradient(180deg,rgba(232,249,243,.98),rgba(253,250,246,.96)),
+    url('https://images.unsplash.com/photo-1629904853716-f0bc54eea481?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+  padding:140px 0 90px;overflow:hidden;
+}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(255,125,107,.12),transparent 45%),radial-gradient(circle at 10% 85%,rgba(95,214,178,.18),transparent 45%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(95,214,178,.4);
+  padding:9px 20px;border-radius:50px;font-weight:800;font-size:14px;color:var(--mint-deep);box-shadow:var(--shadow-sm);margin-bottom:24px;
+}
+.hero-badge .pulse{width:9px;height:9px;background:var(--coral);border-radius:50%;animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,125,107,.6)}70%{box-shadow:0 0 0 10px rgba(255,125,107,0)}100%{box-shadow:0 0 0 0 rgba(255,125,107,0)}}
+.hero h1{font-size:clamp(40px,6vw,68px);color:var(--ink);margin-bottom:22px}
+.hero h1 .accent{color:var(--mint-dark);position:relative;display:inline-block}
+.hero h1 .accent::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:12px;background:var(--coral);opacity:.28;z-index:-1;border-radius:6px;animation:underlineIn .9s .6s both}
+@keyframes underlineIn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hero p.lead{font-size:18px;color:var(--ink-soft);max-width:520px;margin-bottom:34px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:44px}
+.hero-trust{display:flex;gap:34px;flex-wrap:wrap}
+.hero-trust .t b{font-family:'Fredoka',sans-serif;font-size:24px;color:var(--mint-deep);display:block}
+.hero-trust .t span{font-size:13.5px;color:var(--ink-soft);font-weight:600}
+.hero-trust .t + .t{padding-left:34px;border-left:1px solid rgba(31,45,42,.1)}
+
+.hero-visual{position:relative}
+.hero-img-card{
+  position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);
+  transform:rotate(1.5deg);border:8px solid #fff;
+}
+.hero-img-card img{width:100%;height:520px;object-fit:cover}
+.hero-img-card::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,transparent 60%,rgba(23,133,108,.35));}
+.float-card{
+  position:absolute;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-lg);
+  padding:14px 18px;display:flex;align-items:center;gap:12px;animation:floaty 5s ease-in-out infinite;z-index:3;
+}
+.float-card .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none}
+.float-card b{font-family:'Fredoka',sans-serif;font-size:15px;display:block}
+.float-card span{font-size:12.5px;color:var(--ink-soft);font-weight:600}
+.float-card.c1{top:-26px;right:-18px}
+.float-card.c1 .ic{background:var(--coral-soft)}
+.float-card.c2{bottom:-24px;left:-24px}
+.float-card.c2 .ic{background:var(--mint-soft)}
+.float-card.c3{bottom:90px;right:-30px;animation-delay:1.6s}
+.float-card.c3 .ic{background:#fff4dc}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.ring-deco{position:absolute;border:2px dashed rgba(95,214,178,.5);border-radius:50%;pointer-events:none;animation:spin 30s linear infinite}
+.ring-deco.r1{width:130px;height:130px;top:-40px;left:-50px}
+.ring-deco.r2{width:200px;height:200px;bottom:-60px;right:-40px;animation-direction:reverse;animation-duration:40s}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* paw particles */
+.paws{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.paw-p{position:absolute;opacity:.5;animation:rise linear infinite}
+.paw-p svg{width:100%;height:100%}
+@keyframes rise{
+  0%{transform:translateY(0) rotate(0deg);opacity:0}
+  12%{opacity:.55}
+  88%{opacity:.55}
+  100%{transform:translateY(-110vh) rotate(300deg);opacity:0}
+}
+
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--ink-soft);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;z-index:2}
+.mouse{width:24px;height:38px;border:2px solid var(--ink-soft);border-radius:14px;position:relative}
+.mouse::after{content:"";position:absolute;left:50%;top:6px;width:4px;height:8px;background:var(--coral);border-radius:4px;transform:translateX(-50%);animation:wheel 1.6s infinite}
+@keyframes wheel{0%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,12px)}}
+
+/* ---------- Marquee strip ---------- */
+.marquee{background:var(--mint-deep);color:#fff;padding:16px 0;overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:44px;animation:marquee 28s linear infinite}
+.marquee-track span{font-family:'Fredoka',sans-serif;font-size:15px;letter-spacing:1px;display:inline-flex;align-items:center;gap:44px}
+.marquee-track svg{width:18px;height:18px;opacity:.7}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- Services ---------- */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;perspective:1400px}
+.service-card{
+  background:#fff;border-radius:var(--radius);padding:36px 30px;position:relative;overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:box-shadow .4s;will-change:transform;transform-style:preserve-3d;
+}
+.service-card::before{content:"";position:absolute;top:-60px;right:-60px;width:160px;height:160px;border-radius:50%;background:var(--mint-soft);opacity:0;transition:opacity .4s}
+.service-card:hover::before{opacity:1}
+.service-icon{
+  width:68px;height:68px;border-radius:20px;display:grid;place-items:center;margin-bottom:22px;
+  background:var(--mint-soft);color:var(--mint-deep);transition:transform .4s cubic-bezier(.34,1.56,.64,1);
+}
+.service-card:hover .service-icon{transform:scale(1.12) rotate(-8deg)}
+.service-card:nth-child(3n+2) .service-icon{background:var(--coral-soft);color:var(--coral)}
+.service-card:nth-child(3n) .service-icon{background:#fff4dc;color:#c98a0a}
+.service-icon svg{width:32px;height:32px}
+.service-card h3{font-size:22px;margin-bottom:10px}
+.service-card p{color:var(--ink-soft);font-size:15px;margin-bottom:20px}
+.service-meta{display:flex;align-items:center;justify-content:space-between;border-top:1px dashed rgba(31,45,42,.12);padding-top:16px}
+.price-tag{
+  background:linear-gradient(135deg,var(--mint),var(--mint-dark));color:#fff;font-family:'Fredoka',sans-serif;
+  font-weight:600;font-size:14px;padding:7px 16px;border-radius:50px;display:inline-flex;align-items:center;gap:5px;
+}
+.price-tag small{font-size:11px;font-weight:500;opacity:.85}
+.service-link{font-weight:800;font-size:14px;color:var(--mint-deep);display:inline-flex;align-items:center;gap:6px}
+.service-link svg{width:15px;height:15px;transition:transform .3s}
+.service-link:hover svg{transform:translateX(4px)}
+
+/* ---------- About ---------- */
+.about{background:var(--warm);position:relative;overflow:hidden}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-visual{position:relative;display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(12,1fr);height:520px}
+.about-img{position:absolute;border-radius:var(--radius);object-fit:cover;box-shadow:var(--shadow-md);border:6px solid #fff}
+.about-img.a1{width:70%;height:70%;top:0;left:0;transform:rotate(-2deg)}
+.about-img.a2{width:52%;height:52%;bottom:0;right:0;transform:rotate(3deg);z-index:2;border-color:var(--mint-soft)}
+.about-badge{position:absolute;bottom:8px;left:6%;z-index:3;background:var(--mint);color:#fff;border-radius:var(--radius);padding:18px 22px;box-shadow:var(--shadow-lg);animation:floaty 6s ease-in-out infinite}
+.about-badge b{font-family:'Fredoka',sans-serif;font-size:34px;display:block;line-height:1}
+.about-badge span{font-size:13px;font-weight:700;opacity:.9}
+.about-content h2{font-size:clamp(30px,4vw,42px);margin-bottom:20px}
+.about-content p{color:var(--ink-soft);margin-bottom:16px}
+.about-points{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0 30px}
+.about-points li{list-style:none;display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px}
+.about-points .ck{width:24px;height:24px;border-radius:50%;background:var(--mint);color:#fff;display:grid;place-items:center;flex:none}
+.about-points .ck svg{width:13px;height:13px}
+.signature{display:flex;align-items:center;gap:16px;margin-top:8px}
+.signature img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--mint)}
+.signature b{font-family:'Fredoka',sans-serif;display:block;font-size:16px}
+.signature span{font-size:13px;color:var(--ink-soft);font-weight:600}
+
+/* ---------- Stats ---------- */
+.stats{background:linear-gradient(135deg,var(--mint-dark),var(--mint-deep));color:#fff;position:relative;overflow:hidden}
+.stats::before{content:"";position:absolute;top:-60px;right:-40px;width:280px;height:280px;border-radius:50%;border:40px solid rgba(255,255,255,.08)}
+.stats::after{content:"";position:absolute;bottom:-90px;left:-50px;width:260px;height:260px;border-radius:50%;border:34px solid rgba(255,255,255,.07)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center;position:relative;z-index:2}
+.stat b{font-family:'Fredoka',sans-serif;font-size:clamp(38px,5vw,56px);display:block;line-height:1}
+.stat b sup{font-size:26px;color:#ffe0b2}
+.stat span{font-size:14px;font-weight:700;opacity:.85;letter-spacing:.6px}
+.stat-icon{width:54px;height:54px;border-radius:16px;background:rgba(255,255,255,.16);display:grid;place-items:center;margin:0 auto 14px}
+.stat-icon svg{width:26px;height:26px}
+
+/* ---------- Team / Doctors ---------- */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.doc-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s;position:relative}
+.doc-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg)}
+.doc-photo{position:relative;height:330px;overflow:hidden}
+.doc-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.doc-card:hover .doc-photo img{transform:scale(1.07)}
+.doc-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(31,45,42,.55))}
+.doc-social{position:absolute;bottom:16px;left:0;right:0;display:flex;justify-content:center;gap:10px;z-index:2;opacity:0;transform:translateY(12px);transition:.35s}
+.doc-card:hover .doc-social{opacity:1;transform:translateY(0)}
+.doc-social a{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;transition:.3s}
+.doc-social a:hover{background:var(--coral);color:#fff;transform:translateY(-3px)}
+.doc-social svg{width:17px;height:17px}
+.doc-body{padding:24px 26px;text-align:center}
+.doc-body h3{font-size:21px}
+.spec{display:inline-block;background:var(--mint-soft);color:var(--mint-deep);font-weight:800;font-size:12.5px;padding:6px 16px;border-radius:50px;margin:8px 0 12px;letter-spacing:.5px}
+.doc-body p{font-size:14px;color:var(--ink-soft)}
+.doc-badge{position:absolute;top:16px;left:16px;background:var(--coral);color:#fff;font-weight:800;font-size:12px;padding:6px 14px;border-radius:50px;z-index:2;letter-spacing:.5px;box-shadow:var(--shadow-sm)}
+
+/* ---------- Testimonials ---------- */
+.testi{background:var(--mint-soft)}
+.testi-slider{max-width:860px;margin:0 auto;position:relative}
+.testi-viewport{overflow:hidden;border-radius:var(--radius-lg)}
+.testi-track{display:flex;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.testi-slide{min-width:100%;padding:6px}
+.testi-card{background:#fff;border-radius:var(--radius-lg);padding:46px;text-align:center;box-shadow:var(--shadow-md);position:relative}
+.testi-card::before{content:"\201C";position:absolute;top:8px;left:28px;font-family:'Fredoka',sans-serif;font-size:120px;color:var(--mint);opacity:.18;line-height:1}
+.stars{color:#ffb703;font-size:20px;letter-spacing:3px;margin-bottom:18px}
+.testi-card blockquote{font-size:18px;font-style:italic;color:var(--ink);max-width:620px;margin:0 auto 26px}
+.testi-author{display:flex;align-items:center;justify-content:center;gap:14px}
+.testi-author img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:3px solid var(--mint)}
+.testi-author b{font-family:'Fredoka',sans-serif;display:block;font-size:16px}
+.testi-author span{font-size:13px;color:var(--ink-soft);font-weight:600}
+.testi-nav{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:28px}
+.testi-arrow{width:46px;height:46px;border-radius:50%;border:2px solid rgba(31,45,42,.15);background:#fff;cursor:pointer;display:grid;place-items:center;transition:.3s}
+.testi-arrow:hover{background:var(--mint);border-color:var(--mint);color:#fff;transform:translateY(-2px)}
+.testi-arrow svg{width:18px;height:18px}
+.testi-dots{display:flex;gap:8px}
+.testi-dot{width:10px;height:10px;border-radius:50%;background:rgba(31,45,42,.18);cursor:pointer;transition:.3s;border:none}
+.testi-dot.active{background:var(--mint-dark);width:28px;border-radius:6px}
+
+/* ---------- Gallery ---------- */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px}
+.g-item{position:relative;border-radius:var(--radius);overflow:hidden;cursor:pointer}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.g-item:hover img{transform:scale(1.1)}
+.g-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(23,133,108,.75));opacity:0;transition:.4s}
+.g-item:hover::after{opacity:1}
+.g-cap{position:absolute;bottom:14px;left:16px;color:#fff;z-index:2;opacity:0;transform:translateY(12px);transition:.4s;font-family:'Fredoka',sans-serif;font-weight:600}
+.g-item:hover .g-cap{opacity:1;transform:translateY(0)}
+.g-tall{grid-row:span 2}
+.g-wide{grid-column:span 2}
+
+/* before / after */
+.ba{grid-column:span 2;grid-row:span 2;border-radius:var(--radius);overflow:hidden;position:relative;user-select:none}
+.ba img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.ba .ba-after{clip-path:inset(0 0 0 50%)}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);cursor:ew-resize;z-index:4}
+.ba-handle::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:var(--coral);color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:800;box-shadow:var(--shadow-md)}
+.ba-label{position:absolute;z-index:3;top:12px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:13px;color:#fff;background:rgba(31,45,42,.6);padding:5px 14px;border-radius:50px;backdrop-filter:blur(4px)}
+.ba-label.before{left:12px}
+.ba-label.after{right:12px}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(15,25,23,.92);z-index:200;display:grid;place-items:center;opacity:0;pointer-events:none;transition:.4s}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-width:88vw;max-height:82vh;border-radius:var(--radius);box-shadow:var(--shadow-lg);transform:scale(.92);transition:.4s}
+.lightbox.open img{transform:scale(1)}
+.lb-close{position:absolute;top:24px;right:28px;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:22px;cursor:pointer;transition:.3s}
+.lb-close:hover{background:var(--coral);transform:rotate(90deg)}
+
+/* ---------- Booking ---------- */
+.booking{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--mint-deep),#0f5c4a)}
+.booking::before{content:"";position:absolute;top:-120px;right:-80px;width:400px;height:400px;border-radius:50%;border:60px solid rgba(255,255,255,.06)}
+.booking::after{content:"";position:absolute;bottom:-140px;left:-80px;width:380px;height:380px;border-radius:50%;border:50px solid rgba(255,255,255,.05)}
+.booking .sec-head h2{color:#fff}
+.booking .sec-head p{color:rgba(255,255,255,.75)}
+.booking .eyebrow{background:rgba(255,255,255,.14);color:#fff}
+.booking-wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start;position:relative;z-index:2}
+.booking-info{color:#fff}
+.booking-info h3{font-size:26px;margin-bottom:16px}
+.booking-info p{color:rgba(255,255,255,.8);margin-bottom:24px}
+.emergency{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);padding:22px;display:flex;gap:16px;align-items:flex-start;backdrop-filter:blur(6px)}
+.emergency .ic{width:52px;height:52px;background:var(--coral);border-radius:14px;display:grid;place-items:center;flex:none}
+.emergency svg{width:26px;height:26px}
+.emergency b{font-family:'Fredoka',sans-serif;font-size:18px}
+.emergency a{color:#ffe0b2;font-weight:800;text-decoration:underline}
+.emergency span{font-size:14px;opacity:.85}
+.form-card{background:#fff;border-radius:var(--radius-lg);padding:40px;box-shadow:var(--shadow-lg)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.f-group{display:flex;flex-direction:column;gap:7px}
+.f-group.full{grid-column:1/-1}
+.f-group label{font-family:'Fredoka',sans-serif;font-weight:600;font-size:14px;color:var(--ink)}
+.f-group input,.f-group select,.f-group textarea{
+  border:2px solid #e6e9e7;border-radius:12px;padding:13px 16px;font-family:inherit;font-size:15px;
+  color:var(--ink);background:var(--cream);transition:.3s;outline:none;width:100%;
+}
+.f-group input:focus,.f-group select:focus,.f-group textarea:focus{border-color:var(--mint);background:#fff;box-shadow:0 0 0 4px rgba(95,214,178,.18)}
+.f-group input.error{border-color:var(--coral)}
+.f-group textarea{resize:vertical;min-height:100px}
+.form-note{font-size:13px;color:var(--ink-soft);margin-top:14px;display:flex;align-items:center;gap:8px}
+.form-note svg{width:15px;height:15px;color:var(--mint-dark)}
+.form-msg{display:none;margin-top:16px;padding:14px 18px;border-radius:12px;font-weight:700;font-size:15px;text-align:center}
+.form-msg.ok{display:block;background:var(--mint-soft);color:var(--mint-deep);animation:pop .5s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+.f-group select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235c6f6a' stroke-width='2.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:stretch}
+.contact-cards{display:flex;flex-direction:column;gap:18px}
+.contact-card{background:#fff;border-radius:var(--radius);padding:24px;display:flex;gap:18px;align-items:flex-start;box-shadow:var(--shadow-sm);transition:.35s}
+.contact-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.contact-card .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;flex:none}
+.contact-card .ic svg{width:25px;height:25px}
+.contact-card:nth-child(1) .ic{background:var(--mint-soft);color:var(--mint-deep)}
+.contact-card:nth-child(2) .ic{background:var(--coral-soft);color:var(--coral)}
+.contact-card:nth-child(3) .ic{background:#fff4dc;color:#c98a0a}
+.contact-card h4{font-size:17px;margin-bottom:3px}
+.contact-card p,.contact-card a{font-size:15px;color:var(--ink-soft);font-weight:600}
+.contact-card a:hover{color:var(--mint-dark)}
+.hours-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden}
+.hours-head{background:linear-gradient(135deg,var(--mint),var(--mint-dark));color:#fff;padding:18px 26px;display:flex;align-items:center;gap:12px;font-family:'Fredoka',sans-serif;font-size:18px}
+.hours-head svg{width:22px;height:22px}
+.hours-row{display:flex;justify-content:space-between;align-items:center;padding:13px 26px;border-bottom:1px dashed rgba(31,45,42,.1)}
+.hours-row:last-child{border-bottom:none}
+.hours-row.today{background:var(--mint-soft)}
+.hours-row.today .d{color:var(--mint-deep)}
+.hours-row .d{font-weight:800;font-size:15px}
+.hours-row .h{font-size:14px;color:var(--ink-soft);font-weight:600}
+.hours-row .h.closed{color:var(--coral);font-weight:800}
+.map-card{grid-column:1/-1;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md);position:relative;min-height:420px}
+.map-card iframe{width:100%;height:100%;min-height:420px;border:0;filter:saturate(.9)}
+.map-pin{position:absolute;top:18px;left:18px;background:#fff;border-radius:14px;box-shadow:var(--shadow-md);padding:12px 18px;display:flex;gap:12px;align-items:center;z-index:5;font-weight:700;font-size:13px}
+.map-pin .ic{width:36px;height:36px;background:var(--coral);color:#fff;border-radius:10px;display:grid;place-items:center}
+.map-pin svg{width:18px;height:18px}
+
+/* ---------- Footer ---------- */
+footer{background:#17322c;color:rgba(255,255,255,.72);position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;bottom:-140px;right:-100px;width:420px;height:420px;border-radius:50%;border:60px solid rgba(255,255,255,.03)}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:40px;padding:70px 0 46px;position:relative;z-index:2}
+.footer-brand .logo{color:#fff;margin-bottom:16px}
+.footer-brand .logo small{color:rgba(255,255,255,.5)}
+.footer-brand p{font-size:14.5px;max-width:300px}
+.footer-social{display:flex;gap:10px;margin-top:22px}
+.footer-social a{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:.3s}
+.footer-social a:hover{background:var(--mint);transform:translateY(-4px)}
+.footer-social svg{width:18px;height:18px}
+.footer-col h4{color:#fff;font-family:'Fredoka',sans-serif;font-size:17px;margin-bottom:18px;position:relative;padding-bottom:10px}
+.footer-col h4::after{content:"";position:absolute;left:0;bottom:0;width:30px;height:3px;border-radius:3px;background:var(--coral)}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:11px}
+.footer-col ul a{font-size:14.5px;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.footer-col ul a:hover{color:var(--mint);transform:translateX(4px)}
+.footer-col ul a svg{width:12px;height:12px}
+.newsletter p{font-size:14px;margin-bottom:14px}
+.newsletter-form{display:flex;gap:8px}
+.newsletter-form input{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:13px 16px;color:#fff;font-family:inherit;outline:none;font-size:14px}
+.newsletter-form input::placeholder{color:rgba(255,255,255,.45)}
+.newsletter-form button{width:50px;border:none;border-radius:12px;background:var(--coral);color:#fff;cursor:pointer;display:grid;place-items:center;transition:.3s}
+.newsletter-form button:hover{background:var(--mint);transform:scale(1.05)}
+.newsletter-form button svg{width:20px;height:20px}
+.newsletter-ok{display:none;margin-top:10px;font-size:13px;color:var(--mint);font-weight:700}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:22px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13.5px;position:relative;z-index:2}
+.footer-bottom a{color:var(--mint)}
+.footer-bottom a:hover{text-decoration:underline}
+
+/* back to top */
+.totop{position:fixed;bottom:26px;right:26px;width:50px;height:50px;border-radius:16px;background:var(--mint-dark);color:#fff;border:none;cursor:pointer;display:grid;place-items:center;opacity:0;transform:translateY(16px);transition:.35s;z-index:90;box-shadow:var(--shadow-md)}
+.totop.show{opacity:1;transform:translateY(0)}
+.totop:hover{background:var(--coral);transform:translateY(-4px)}
+.totop svg{width:22px;height:22px}
+
+/* floating booking bubble */
+.book-bubble{position:fixed;bottom:26px;left:26px;z-index:90;width:60px;height:60px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(255,125,107,.5);cursor:pointer;transition:.35s;animation:floaty 4s ease-in-out infinite}
+.book-bubble:hover{transform:scale(1.12) rotate(-6deg)}
+.book-bubble svg{width:26px;height:26px}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1024px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{grid-template-columns:1fr;gap:60px}
+  .hero-visual{max-width:560px;margin:0 auto;width:100%}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .sec{padding:72px 0}
+  .nav-links{position:fixed;inset:74px 0 auto 0;background:#fff;flex-direction:column;padding:26px;gap:6px;transform:translateY(-140%);transition:.4s;box-shadow:var(--shadow-lg);border-radius:0 0 var(--radius-lg) var(--radius-lg)}
+  .nav-links.open{transform:translateY(0)}
+  .nav-links a{width:100%;text-align:center}
+  .nav-phone{display:none}
+  .hamburger{display:block}
+  .nav-cta .btn{padding:13px 22px;font-size:14px}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:38px}
+  .team-grid,.about-grid{grid-template-columns:1fr}
+  .booking-wrap{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .g-wide{grid-column:span 2}
+  .form-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:34px}
+  .testi-card{padding:32px 24px}
+  .hero{padding-top:120px}
+  .hero-img-card img{height:400px}
+  .float-card.c1{right:6px;top:-16px}
+  .float-card.c3{right:8px}
+  .about-visual{height:420px}
+}
+@media(max-width:520px){
+  .services-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr;grid-auto-rows:220px}
+  .g-wide,.ba{grid-column:span 1}
+  .ba{grid-row:span 1;min-height:280px}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn{justify-content:center}
+  .stats-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#home" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.7 4.5c-1-1.6-3.4-1.6-4.4 0L2.5 12.6c-.9 1.4.2 3.2 1.9 3.2h15.2c1.7 0 2.8-1.8 1.9-3.2l-4.8-8.1c-1-1.6-3.4-1.6-4.4 0" opacity=".9"/><circle cx="8.5" cy="14.5" r="1.1" fill="#fff"/><circle cx="15.5" cy="14.5" r="1.1" fill="#fff"/></svg>
+      </span>
+      <span>PawCare<small>Veterinary Hospital</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#doctors">Team</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+442071834521" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +44 20 7183 4521
+      </a>
+      <a href="#booking" class="btn btn-primary">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="paws" id="paws"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="hero-badge"><span class="pulse"></span> Accepting new patients · Open 24/7 for emergencies</span>
+      <h1>Caring for your <span class="accent">best friend</span>, like family.</h1>
+      <p class="lead">PawCare Veterinary Hospital blends modern medicine with a gentle heart. From routine checkups to round-the-clock emergency care, we treat every tail-wag and purr as if it were our own.</p>
+      <div class="hero-cta">
+        <a href="#booking" class="btn btn-primary">Book Appointment
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="t"><b>9+</b><span>Years of care</span></div>
+        <div class="t"><b>12k+</b><span>Happy patients</span></div>
+        <div class="t"><b>4.9★</b><span>Rated by owners</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="ring-deco r1"></div>
+      <div class="ring-deco r2"></div>
+      <div class="hero-img-card">
+        <img src="https://images.unsplash.com/photo-1629904853716-f0bc54eea481?q=80&w=1200&auto=format&fit=crop" alt="Veterinarian gently examining a dog" fetchpriority="high">
+      </div>
+      <div class="float-card c1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ff7d6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0L12 5.35l-.77-.77a5.4 5.4 0 0 0-7.65 7.65l.77.77L12 20.77l7.65-7.65.77-.77a5.4 5.4 0 0 0 0-7.65z"/></svg></div>
+        <div><b>Rated 4.9/5</b><span>1,200+ reviews</span></div>
+      </div>
+      <div class="float-card c2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#17856c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></div>
+        <div><b>Fully Vaccinated</b><span>500+ jabs given</span></div>
+      </div>
+      <div class="float-card c3">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c98a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div><b>Open 24/7</b><span>Emergency ready</span></div>
+      </div>
+    </div>
+  </div>
+  <a href="#services" class="scroll-hint"><span class="mouse"></span>Scroll</a>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>GENERAL CHECKUPS <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" opacity=".6"/><circle cx="12" cy="12" r="4"/></svg></span>
+    <span>VACCINATIONS <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" opacity=".6"/><circle cx="12" cy="12" r="4"/></svg></span>
+    <span>SURGERY <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" opacity=".6"/><circle cx="12" cy="12" r="4"/></svg></span>
+    <span>DENTAL CARE <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" opacity=".6"/><circle cx="12" cy="12" r="4"/></svg></span>
+    <span>EMERGENCY 24/7 <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" opacity=".6"/><circle cx="12" cy="12" r="4"/></svg></span>
+    <span>GROOMING <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" opacity=".6"/><circle cx="12" cy="12" r="4"/></svg></span>
+  </div>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Our Services</span>
+      <h2>Everything your pet needs, under one roof</h2>
+      <p>Compassionate, science-backed care across the full spectrum of veterinary medicine — priced clearly and delivered warmly.</p>
+    </div>
+    <div class="services-grid" id="servicesGrid">
+      <article class="service-card reveal" data-d="0">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.4"/><circle cx="15.5" cy="9" r="1.4"/><circle cx="8.5" cy="14.5" r="1.4"/><circle cx="15.5" cy="14.5" r="1.4"/></svg></div>
+        <h3>General Checkups</h3>
+        <p>Comprehensive wellness exams including weight, heart, teeth, and mobility checks, with personalised health plans.</p>
+        <div class="service-meta">
+          <span class="price-tag"><small>from</small> £45</span>
+          <a href="#booking" class="service-link">Book <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+      <article class="service-card reveal" data-d="1">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Vaccinations</h3>
+        <p>Core and lifestyle vaccines for dogs, cats, and rabbits with tailored schedules and boosters, fully certified.</p>
+        <div class="service-meta">
+          <span class="price-tag"><small>from</small> £32</span>
+          <a href="#booking" class="service-link">Book <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+      <article class="service-card reveal" data-d="2">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/><path d="M16 3v18"/></svg></div>
+        <h3>Surgery</h3>
+        <p>Safe, state-of-the-art soft tissue and orthopaedic surgery with dedicated anaesthetic monitoring and recovery.</p>
+        <div class="service-meta">
+          <span class="price-tag"><small>from</small> £210</span>
+          <a href="#booking" class="service-link">Book <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+      <article class="service-card reveal" data-d="3">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.25c-3.5-2.9-7.5-.9-7.5 2.6 0 3.6 4 6.2 7.5 10.9 3.5-4.7 7.5-7.3 7.5-10.9 0-3.5-4-5.5-7.5-2.6z"/><path d="M12 8.5v3M10.5 10h3"/></svg></div>
+        <h3>Dental Care</h3>
+        <p>Ultrasonic scaling, polishing, and extractions to prevent painful gum disease and keep breath fresh.</p>
+        <div class="service-meta">
+          <span class="price-tag"><small>from</small> £85</span>
+          <a href="#booking" class="service-link">Book <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+      <article class="service-card reveal" data-d="4">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8z"/><path d="M4 4h9a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></div>
+        <h3>Emergency Care</h3>
+        <p>24/7 critical care, poisoning response, trauma stabilisation, and in-house laboratory for fast diagnosis.</p>
+        <div class="service-meta">
+          <span class="price-tag"><small>24/7</small> Call now</span>
+          <a href="tel:+442071834521" class="service-link">Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+      <article class="service-card reveal" data-d="5">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>Grooming & Spa</h3>
+        <p>Stress-free baths, breed-standard cuts, nail care, and de-shedding in a calm, fear-free salon.</p>
+        <div class="service-meta">
+          <span class="price-tag"><small>from</small> £38</span>
+          <a href="#booking" class="service-link">Book <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual reveal reveal-left">
+      <img class="about-img a1" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=900&auto=format&fit=crop" alt="Happy puppy in clinic" loading="lazy">
+      <img class="about-img a2" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=700&auto=format&fit=crop" alt="Cat at the vets" loading="lazy">
+      <div class="about-badge"><b>2016</b><span>Founded in Kensington</span></div>
+    </div>
+    <div class="about-content reveal reveal-right">
+      <span class="eyebrow">About PawCare</span>
+      <h2>A neighbourhood clinic with a big heart</h2>
+      <p>PawCare Veterinary Hospital opened its doors in the heart of Kensington in 2016 with a simple belief: every pet deserves treatment as gentle as it is expert. What began as a two-room practice is now a full hospital trusted by thousands of families.</p>
+      <p>We combine modern diagnostic technology with old-fashioned compassion — taking the time to listen to you, understand your pet, and build care plans that fit real life.</p>
+      <ul class="about-points">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Fear-free certified handling</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> In-house lab & imaging</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> RCVS-registered vets</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Insurance-friendly billing</li>
+      </ul>
+      <div class="signature">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=300&auto=format&fit=crop" alt="Dr. Elena Hart" loading="lazy">
+        <div><b>Dr. Elena Hart</b><span>Founder & Chief Veterinarian</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="sec stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat reveal" data-d="0">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <b><span class="counter" data-target="9">0</span>+</b>
+        <span>Years of Experience</span>
+      </div>
+      <div class="stat reveal" data-d="1">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 3.5 21 12l-15.5 8.5v-7l7-1.5-7-1.5z"/><path d="M5.5 3.5v17"/></svg></div>
+        <b><span class="counter" data-target="12">0</span>k+</b>
+        <span>Pets Treated</span>
+      </div>
+      <div class="stat reveal" data-d="2">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg></div>
+        <b><span class="counter" data-target="24">0</span>/7</b>
+        <span>Emergency Care</span>
+      </div>
+      <div class="stat reveal" data-d="3">
+        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8l-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg></div>
+        <b><span class="counter" data-target="98">0</span><sup>%</sup></b>
+        <span>Satisfaction Rate</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="sec" id="doctors">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Meet The Team</span>
+      <h2>Vets who truly love what they do</h2>
+      <p>Three dedicated veterinarians, endless compassion, and a combined two decades of clinical experience.</p>
+    </div>
+    <div class="team-grid">
+      <article class="doc-card reveal" data-d="0">
+        <div class="doc-photo">
+          <span class="doc-badge">Founder</span>
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=700&auto=format&fit=crop" alt="Dr. Elena Hart" loading="lazy">
+          <div class="doc-social">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"/></svg></a>
+          </div>
+        </div>
+        <div class="doc-body">
+          <h3>Dr. Elena Hart</h3>
+          <span class="spec">Small Animal Medicine · Surgery</span>
+          <p>Founded PawCare in 2016. Royal Veterinary College graduate specialising in feline internal medicine.</p>
+        </div>
+      </article>
+      <article class="doc-card reveal" data-d="1">
+        <div class="doc-photo">
+          <span class="doc-badge">Head Surgeon</span>
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=700&auto=format&fit=crop" alt="Dr. Marcus Osei" loading="lazy">
+          <div class="doc-social">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"/></svg></a>
+          </div>
+        </div>
+        <div class="doc-body">
+          <h3>Dr. Marcus Osei</h3>
+          <span class="spec">Orthopaedics · Emergency</span>
+          <p>European specialist in veterinary surgery with 11 years of experience in trauma and complex orthopaedic cases.</p>
+        </div>
+      </article>
+      <article class="doc-card reveal" data-d="2">
+        <div class="doc-photo">
+          <span class="doc-badge">Vet & Dentist</span>
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=700&auto=format&fit=crop" alt="Dr. Sophie Turner" loading="lazy">
+          <div class="doc-social">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"/></svg></a>
+          </div>
+        </div>
+        <div class="doc-body">
+          <h3>Dr. Sophie Turner</h3>
+          <span class="spec">Dentistry · Preventative Care</span>
+          <p>Certified veterinary dentist devoted to pain-free dental procedures and building lifelong preventative habits.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="sec testi" id="testimonials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow coral">Happy Tails</span>
+      <h2>What pet owners say about us</h2>
+    </div>
+    <div class="testi-slider reveal">
+      <div class="testi-viewport">
+        <div class="testi-track" id="testiTrack">
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="stars">★★★★★</div>
+              <blockquote>"When our Golden Retriever Bella needed emergency surgery at midnight, PawCare had her in surgery within the hour. Dr. Osei called us personally at 3am. They didn't just save her life — they held our hands through it."</blockquote>
+              <div class="testi-author">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Mitchell">
+                <div><b>Sarah Mitchell</b><span>Bella's mum · Notting Hill</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="stars">★★★★★</div>
+              <blockquote>"Our cat Mochi is terrified of vets, but the fear-free team at PawCare turned every visit into a calm, positive experience. The groomers even taught us how to brush her without the drama!"</blockquote>
+              <div class="testi-author">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Carter">
+                <div><b>James Carter</b><span>Mochi's dad · South Kensington</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="stars">★★★★★</div>
+              <blockquote>"From vaccinations for our new puppy to dental cleanings for our senior rescue, the whole team is kind, transparent, and never pushy about add-ons. Genuinely the best vet practice in London."</blockquote>
+              <div class="testi-author">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amara Nwosu">
+                <div><b>Amara Nwosu</b><span>Milo & Pippa's human · Chelsea</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="stars">★★★★★</div>
+              <blockquote>"I've boarded and treated my elderly cat here for three years. Dr. Hart remembers every detail of her history and treats us like family. The 24/7 emergency line has saved us twice. Forever grateful."</blockquote>
+              <div class="testi-author">
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Okafor">
+                <div><b>David Okafor</b><span>Cleo's dad · Kensington</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-nav">
+        <button class="testi-arrow" id="testiPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-arrow" id="testiNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Inside PawCare</span>
+      <h2>A tour of our clinic</h2>
+      <p>Modern facilities designed to keep pets calm — plus a peek at our grooming transformations.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="g-item g-tall" data-full="https://images.unsplash.com/photo-1629904853716-f0bc54eea481?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1629904853716-f0bc54eea481?q=80&w=700&auto=format&fit=crop" alt="Consultation room" loading="lazy">
+        <span class="g-cap">Consultation Suite</span>
+      </div>
+      <div class="g-item" data-full="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=700&auto=format&fit=crop" alt="Happy clinic dog" loading="lazy">
+        <span class="g-cap">Patient Lounge</span>
+      </div>
+      <div class="g-item g-tall" data-full="https://images.unsplash.com/photo-1583947215259-38e31be8751f?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?q=80&w=700&auto=format&fit=crop" alt="Grooming station" loading="lazy">
+        <span class="g-cap">Grooming Salon</span>
+      </div>
+      <div class="g-item g-wide" data-full="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1000&auto=format&fit=crop" alt="Dogs playing" loading="lazy">
+        <span class="g-cap">Daycare Play Area</span>
+      </div>
+      <div class="g-item" data-full="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=700&auto=format&fit=crop" alt="Vet operating theatre" loading="lazy">
+        <span class="g-cap">Surgery Theatre</span>
+      </div>
+      <div class="ba" id="baCompare">
+        <span class="ba-label before">Before</span>
+        <span class="ba-label after">After</span>
+        <img class="ba-before" src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=900&auto=format&fit=crop" alt="Grooming before" loading="lazy">
+        <img class="ba-after" src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?q=80&w=900&auto=format&fit=crop" alt="Grooming after" loading="lazy">
+        <div class="ba-handle"></div>
+      </div>
+      <div class="g-item" data-full="https://images.unsplash.com/photo-1450778869180-41d0601e046e?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?q=80&w=700&auto=format&fit=crop" alt="Puppy in grooming" loading="lazy">
+        <span class="g-cap">Puppy Care</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox"><img id="lbImg" src="" alt="Gallery preview"><button class="lb-close" id="lbClose">✕</button></div>
+
+<!-- ================= BOOKING ================= -->
+<section class="sec booking" id="booking">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Book An Appointment</span>
+      <h2>Give your pet the care they deserve</h2>
+      <p>Fill in the form and our friendly reception team will confirm your slot within 30 minutes.</p>
+    </div>
+    <div class="booking-wrap">
+      <div class="booking-info reveal reveal-left">
+        <h3>Before you visit</h3>
+        <p>Please arrive 10 minutes early with any medical records. Fasting is only required for surgery and bloodwork — we'll let you know when booking. Cats travel best in secure carriers, dogs on a lead.</p>
+        <div class="emergency">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg></div>
+          <div>
+            <b>Emergency? Call us now</b>
+            <span>We have a vet on call 24 hours a day, 7 days a week.</span><br>
+            <a href="tel:+442071834521">+44 20 7183 4521</a>
+          </div>
+        </div>
+      </div>
+      <form class="form-card reveal reveal-right" id="bookingForm" novalidate>
+        <div class="form-grid">
+          <div class="f-group">
+            <label for="petName">Pet Name *</label>
+            <input type="text" id="petName" placeholder="e.g. Biscuit">
+          </div>
+          <div class="f-group">
+            <label for="petType">Pet Type *</label>
+            <select id="petType">
+              <option value="" selected disabled>Select type</option>
+              <option>Dog</option>
+              <option>Cat</option>
+              <option>Rabbit</option>
+              <option>Bird</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label for="ownerName">Owner Name *</label>
+            <input type="text" id="ownerName" placeholder="Your full name">
+          </div>
+          <div class="f-group">
+            <label for="ownerPhone">Phone *</label>
+            <input type="tel" id="ownerPhone" placeholder="+44 ...">
+          </div>
+          <div class="f-group">
+            <label for="ownerEmail">Email *</label>
+            <input type="email" id="ownerEmail" placeholder="you@email.com">
+          </div>
+          <div class="f-group">
+            <label for="prefDate">Preferred Date *</label>
+            <input type="date" id="prefDate">
+          </div>
+          <div class="f-group">
+            <label for="prefTime">Preferred Time *</label>
+            <select id="prefTime">
+              <option value="" selected disabled>Select time</option>
+              <option>09:00 – 10:00</option>
+              <option>10:00 – 11:00</option>
+              <option>11:00 – 12:00</option>
+              <option>13:00 – 14:00</option>
+              <option>14:00 – 15:00</option>
+              <option>15:00 – 16:00</option>
+              <option>16:00 – 17:00</option>
+              <option>17:00 – 18:00</option>
+            </select>
+          </div>
+          <div class="f-group full">
+            <label for="service">Service Needed *</label>
+            <select id="service">
+              <option value="" selected disabled>Choose a service</option>
+              <option>General Checkup</option>
+              <option>Vaccination</option>
+              <option>Surgery Consultation</option>
+              <option>Dental Care</option>
+              <option>Emergency</option>
+              <option>Grooming & Spa</option>
+              <option>Not sure — need advice</option>
+            </select>
+          </div>
+          <div class="f-group full">
+            <label for="notes">Notes for the vet</label>
+            <textarea id="notes" placeholder="Anything we should know about your pet? Symptoms, behaviour, medication..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:24px">Request Appointment
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>
+        </button>
+        <p class="form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> We'll confirm by phone or email. No payment needed today.</p>
+        <div class="form-msg" id="formMsg">Thank you! Your appointment request has been received — we'll be in touch within 30 minutes to confirm. 🐾</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Visit PawCare in Kensington</h2>
+      <p>Right in the heart of High Street Kensington — easy parking and two minutes from the tube.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cards reveal reveal-left">
+        <div class="contact-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h4>Visit Us</h4><p>27 Kensington High Street<br>London, W8 5NP, United Kingdom</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><h4>Call Us</h4><p>Reception & appointments<br><a href="tel:+442071834521">+44 20 7183 4521</a></p></div>
+        </div>
+        <div class="contact-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+          <div><h4>Email Us</h4><p><a href="mailto:care@pawcarevet.co.uk">care@pawcarevet.co.uk</a><br>We reply within one working day</p></div>
+        </div>
+        <div class="hours-card">
+          <div class="hours-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Opening Hours
+          </div>
+          <div class="hours-row"><span class="d">Monday – Friday</span><span class="h">8:00 AM – 8:00 PM</span></div>
+          <div class="hours-row"><span class="d">Saturday</span><span class="h">9:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="d">Sunday</span><span class="h">10:00 AM – 4:00 PM</span></div>
+          <div class="hours-row today"><span class="d">Emergencies</span><span class="h" style="color:var(--mint-deep)">24 / 7 / 365</span></div>
+          <div class="hours-row"><span class="d">Public Holidays</span><span class="h closed">Limited · call ahead</span></div>
+        </div>
+      </div>
+      <div class="contact-info reveal reveal-right">
+        <div class="map-card">
+          <div class="map-pin"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>PawCare Vet Hospital</div>
+          <iframe title="PawCare location map" src="https://www.google.com/maps?q=27+Kensington+High+Street,+London+W8+5NP,+UK&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.7 4.5c-1-1.6-3.4-1.6-4.4 0L2.5 12.6c-.9 1.4.2 3.2 1.9 3.2h15.2c1.7 0 2.8-1.8 1.9-3.2l-4.8-8.1c-1-1.6-3.4-1.6-4.4 0" opacity=".9"/><circle cx="8.5" cy="14.5" r="1.1" fill="#fff"/><circle cx="15.5" cy="14.5" r="1.1" fill="#fff"/></svg></span>
+          <span>PawCare<small>Veterinary Hospital</small></span>
+        </a>
+        <p>Compassionate, modern veterinary care in the heart of Kensington since 2016. Here for every wag, purr, and happy ending.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#doctors">Our Team</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#booking">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">General Checkups</a></li>
+          <li><a href="#services">Vaccinations</a></li>
+          <li><a href="#services">Surgery</a></li>
+          <li><a href="#services">Dental Care</a></li>
+          <li><a href="#services">Emergency Care</a></li>
+          <li><a href="#services">Grooming</a></li>
+        </ul>
+      </div>
+      <div class="footer-col newsletter">
+        <h4>Pet Health Newsletter</h4>
+        <p>Monthly tips, seasonal health reminders, and exclusive grooming offers. No spam — pawsitively.</p>
+        <form class="newsletter-form" id="newsForm">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        </form>
+        <div class="newsletter-ok" id="newsOk">You're subscribed! Welcome to the pack. 🐾</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> PawCare Veterinary Hospital. All rights reserved.</span>
+      <span>RCVS Practice No. 789012 · <a href="#home">Privacy Policy</a> · <a href="#home">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<a href="#booking" class="book-bubble" aria-label="Book appointment"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg></a>
+<button class="totop" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script>
+/* ---------- Paw print particles ---------- */
+(function(){
+  const box = document.getElementById('paws');
+  if(!box) return;
+  const N = 14;
+  const paw = '<svg viewBox="0 0 64 64" fill="#5fd6b2"><ellipse cx="22" cy="40" rx="10" ry="13"/><circle cx="14" cy="22" r="6"/><circle cx="28" cy="14" r="6"/><circle cx="44" cy="16" r="6"/><circle cx="34" cy="34" r="6" opacity=".35"/></svg>';
+  for(let i=0;i<N;i++){
+    const s = document.createElement('div');
+    s.className='paw-p';
+    s.style.left = Math.random()*100+'%';
+    s.style.width = (14+Math.random()*26)+'px';
+    s.style.animationDuration = (9+Math.random()*12)+'s';
+    s.style.animationDelay = (-Math.random()*18)+'s';
+    s.style.opacity = .25+Math.random()*.35;
+    s.innerHTML = paw;
+    box.appendChild(s);
+  }
+})();
+
+/* ---------- Sticky header ---------- */
+const header = document.getElementById('header');
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', ()=>{
+  header.classList.toggle('scrolled', window.scrollY>40);
+  toTop.classList.toggle('show', window.scrollY>600);
+},{passive:true});
+toTop.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ---------- Mobile nav ---------- */
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', ()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('open');});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{hamburger.classList.remove('active');navLinks.classList.remove('open');}));
+
+/* ---------- Reveal on scroll ---------- */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12, rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---------- Counters ---------- */
+const counterIO = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const el=e.target, target=+el.dataset.target, dur=1800, t0=performance.now();
+    const tick=(t)=>{
+      const p=Math.min((t-t0)/dur,1), eased=1-Math.pow(1-p,3);
+      el.textContent=Math.floor(eased*target);
+      if(p<1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    counterIO.unobserve(el);
+  });
+},{threshold:.5});
+document.querySelectorAll('.counter').forEach(el=>counterIO.observe(el));
+
+/* ---------- 3D tilt on service cards ---------- */
+const tiltCards = document.querySelectorAll('.service-card');
+tiltCards.forEach(card=>{
+  card.addEventListener('mousemove', e=>{
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left)/r.width  - .5;
+    const y = (e.clientY - r.top)/r.height  - .5;
+    card.style.transform = `perspective(900px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-6px)`;
+    card.style.boxShadow = `0 30px 60px rgba(31,45,42,.16), ${x*20}px ${y*20}px 40px rgba(95,214,178,.2)`;
+  });
+  card.addEventListener('mouseleave', ()=>{
+    card.style.transform = 'perspective(900px) rotateY(0) rotateX(0)';
+    card.style.boxShadow = 'var(--shadow-sm)';
+  });
+});
+
+/* ---------- Testimonials carousel ---------- */
+const track = document.getElementById('testiTrack');
+const dotsWrap = document.getElementById('testiDots');
+const slides = track.children.length;
+let idx = 0, timer;
+for(let i=0;i<slides;i++){
+  const d=document.createElement('button');
+  d.className='testi-dot'+(i===0?' active':'');
+  d.setAttribute('aria-label','Go to slide '+(i+1));
+  d.addEventListener('click',()=>{goTo(i);restart();});
+  dotsWrap.appendChild(d);
+}
+function goTo(i){ idx=(i+slides)%slides; track.style.transform=`translateX(-${idx*100}%)`; dotsWrap.querySelectorAll('.testi-dot').forEach((d,k)=>d.classList.toggle('active',k===idx)); }
+function next(){ goTo(idx+1); }
+function prev(){ goTo(idx-1); }
+function restart(){ clearInterval(timer); timer=setInterval(next,5000); }
+document.getElementById('testiNext').addEventListener('click',()=>{next();restart();});
+document.getElementById('testiPrev').addEventListener('click',()=>{prev();restart();});
+restart();
+
+/* ---------- Lightbox ---------- */
+const lightbox=document.getElementById('lightbox'), lbImg=document.getElementById('lbImg');
+document.querySelectorAll('.g-item').forEach(item=>{
+  item.addEventListener('click',()=>{ lbImg.src=item.dataset.full; lightbox.classList.add('open'); });
+});
+document.getElementById('lbClose').addEventListener('click',()=>lightbox.classList.remove('open'));
+lightbox.addEventListener('click',e=>{ if(e.target===lightbox) lightbox.classList.remove('open'); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') lightbox.classList.remove('open'); });
+
+/* ---------- Before / After slider ---------- */
+(function(){
+  const ba=document.getElementById('baCompare');
+  if(!ba) return;
+  const handle=ba.querySelector('.ba-handle');
+  const after=ba.querySelector('.ba-after');
+  let dragging=false;
+  function setPos(x){
+    const r=ba.getBoundingClientRect();
+    let p=(x-r.left)/r.width; p=Math.max(0,Math.min(1,p));
+    handle.style.left=(p*100)+'%';
+    after.style.clipPath=`inset(0 0 0 ${p*100}%)`;
+  }
+  handle.addEventListener('mousedown',()=>dragging=true);
+  handle.addEventListener('touchstart',()=>dragging=true);
+  window.addEventListener('mousemove',e=>{ if(dragging) setPos(e.clientX); });
+  window.addEventListener('touchmove',e=>{ if(dragging) setPos(e.touches[0].clientX); });
+  window.addEventListener('mouseup',()=>dragging=false);
+  window.addEventListener('touchend',()=>dragging=false);
+  ba.addEventListener('click',e=>setPos(e.clientX));
+})();
+
+/* ---------- Booking form ---------- */
+const bf = document.getElementById('bookingForm');
+bf.addEventListener('submit', e=>{
+  e.preventDefault();
+  let ok=true;
+  const fields=[['petName','Pet name is required'],['petType','Please select pet type'],['ownerName','Owner name is required'],['ownerPhone','Phone number is required'],['ownerEmail','A valid email is required'],['prefDate','Please pick a date'],['prefTime','Please pick a time'],['service','Please choose a service']];
+  fields.forEach(([id,msg])=>{
+    const f=document.getElementById(id);
+    const v=f.value.trim();
+    const invalid = !v || (id==='ownerEmail' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+    f.classList.toggle('error',invalid);
+    if(invalid) ok=false;
+  });
+  if(!ok){ const msg=document.getElementById('formMsg'); msg.textContent='Please complete the highlighted fields.'; msg.className='form-msg'; msg.style.display='block'; msg.style.background='var(--coral-soft)'; msg.style.color='var(--coral)'; return; }
+  const msg=document.getElementById('formMsg');
+  msg.className='form-msg ok';
+  bf.reset();
+  msg.scrollIntoView({behavior:'smooth',block:'center'});
+});
+
+/* ---------- Newsletter ---------- */
+const nf=document.getElementById('newsForm');
+nf.addEventListener('submit',e=>{
+  e.preventDefault();
+  const input=nf.querySelector('input');
+  if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)){
+    document.getElementById('newsOk').style.display='block';
+    input.value='';
+  }
+});
+
+/* ---------- Marquee duplicate ---------- */
+const mt=document.getElementById('marqueeTrack');
+mt.innerHTML+=mt.innerHTML;
+
+/* ---------- Year ---------- */
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
